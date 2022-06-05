@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 5px;
+  background-color: black;
+  height: 100vh;
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+  background-image: url(/background.gif);
+  background-size: cover;
+  background-position: relative;
+  overflow: hidden;
+}
+
+.moon {
+  bottom: -50px;
+  right: -100px;
+  width: 500px;
+  position: fixed;
+  overflow: hidden;
+  animation: moon-spin 15s infinite linear;
+}
+
+.astronaut {
+  top: 20%;
+  right: 50px;
+  width: 10%;
+  position: absolute;
+  animation: astronaut-move 10s infinite forwards;
+}
+
+.space_ship {
+  bottom: 0px;
+  left: 50px;
+  width: 10%;
+  transform: scale(0);
+  animation: ship-move 10s infinite forwards;
+}
+
+.sun {
+  bottom: 0px;
+  right: 500px;
+  width: 20%;
+  transform: scale(1);
+  overflow: hidden;
+  animation: sun-scale 10s infinite forwards;
+}
+
+.comet {
+  bottom: 100px;
+  left: 250px;
+  width: 40%;
+  position: absolute;
+  animation: comet-flying 5s infinite forwards;
+}
+
+.alien {
+  bottom: 0px;
+  left: 50px;
+  width: 15%;
+  position: absolute;
+  animation: alien-floating 5s infinite forwards;
+}
+
+@keyframes moon-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes astronaut-move {
+  to {
+    transform: translate(-300px, -100px) rotate(360deg);
+  }
+}
+
+@keyframes ship-move {
+  25% {
+    transform: scale(0.5) translate(-150px, 200px);
+  }
+  50% {
+    transform: scale(2) translate(-200px, 300px);
+  }
+  75% {
+    transform: scale(3) translate(-250px, 300px);
+  }
+  100% {
+    transform: scale(2) translate(-150px, 200px);
+  }
+}
+
+@keyframes sun-scale {
+  25% {
+    transform: scale(0.5) rotate(-20deg);
+  }
+  50% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes alien-floating {
+  25% {
+    transform: translate(0px,-100px);
+  }
+  50%{
+    transform:translate(0px,-50%);
+  }
+  250%{
+    transform:translate(0px,-150%);
+  }
+}
+
