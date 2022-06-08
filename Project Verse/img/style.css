@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: whitesmoke;
+}
+
+.container{
+
+    height: 100vh;
+    width:100vw;
+    background-image: url("/img/background.png");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.content{
+    width: 70%;
+    margin-left: 50px;
+    position: relative;
+    z-index: 2;
+
+}
+
+.content .logo{
+    width: 100px;
+    margin-top:50px;
+}
+
+.content hr{
+    border: none;
+    height: 6px;
+    background-color: #cd7771;
+    max-width: 150px;
+}
+
+.content h1{
+    font-size: 100px;
+    font-weight: 100px;
+    color: #cfcfcfcf;
+    letter-spacing: 4px;
+    line-height: 130px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.content p{
+    max-width: 400px;
+    color:#cfcfcfcf;
+    font-size: 25px;
+    line-height: 20px;
+}
+
+.content .btn{
+    text-decoration: none;
+    color: white;
+    padding: 20px 10px;
+    margin-top: 50px;
+    display:inline-block;
+    border:1px solid white;
+    border-radius: 30px;
+}
+
+.content .btn2{
+    text-decoration: none;
+    color: white;
+    padding: 20px 10px;
+    margin-top: 50px;
+    display:inline-block;
+    border:1px solid white;
+    border-radius: 30px;
+}
+
+.content .btn:hover{
+
+    border-color: #cd7771;
+    background: #cd7771;
+    color: black;
+}
+
+.content .btn2:hover{
+
+    border-color: #cd7771;
+    background: #cd7771;
+    color: black;
+}
+
+.menu{
+width: 50px;
+top:0;
+right:0;
+position: absolute;
+cursor: pointer;
+}
+
+.sidebar{
+    width: 50%;
+    height: 100%;
+    background: rgb(0,0,0,0.8);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left:110;
+    max-width: 500px;
+    backdrop-filter: blur(8px);
+   
+
+}
