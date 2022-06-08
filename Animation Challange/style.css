@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding:0px;
+
+}
+
+body{
+    background: url("/background.gif");
+    background-size: cover;
+    overflow: hidden;
+    z-index: 1;
+    height:100%;
+    width: 100%;
+    position: fixed;
+
+}
+
+
+#fighter{
+    position: relative;
+    top: 440px;
+    width: 208px;
+    height: 208px;
+    z-index: 2;
+    background: url("/spritestrip.avif");
+    animation: walking_fighter 2s steps(6) infinite, move_forward 8s linear infinite;
+}
+
+/* #dragon{
+    background: url("/dragon.png");
+    position: relative;
+    top: 80px;
+    width: 250px;
+    height:250px;
+    z-index: 1;
+    animation: dragon_flying 2s steps(2) infinite, flying 8s alternate infinite; 
+} */
+
+
+@keyframes walking_fighter {
+    0%{background-position: 0px;}
+    100%{background-position: 1250px;}
+    
+}
+
+@keyframes move_forward {
+    0%{transform: translateX(-208px);}
+    100%{transform: translateX(1250px);}
+}
+
+
+
+/* @keyframes dragon_flying{
+    0%{background-position: 300px;}
+    100%{background-position: 600px;}
+}
+
+@keyframes flying {
+    0%{transform: translateY(300px);}
+    100%{ transform: translateY(450px);}
+} */
