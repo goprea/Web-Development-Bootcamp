@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&family=Poppins:ital,wght@0,100;0,300;0,500;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+
+  /*colors:
+text: FDF9FF 
+subtext: F0EAF3
+background: CBC0D
+box fill: EFD3D7 (rose gold)
+stroke, boxes: 8E9AAF (dark grey)
+light pink: FEEAFA
+dark green: 344E41
+light green: 588157
+brown: 49393B
+*/
+}
+
+body {
+  background-color: #cbc0dc;
+  color: #fdf9ff;
+  overflow: hidden;
+}
+
+/* Home page */
+/* navigation bar */
+
+#navbar {
+  background-color: #efd3d7;
+  color: #fdf9ff;
+  width: 100%;
+  height: auto;
+  padding: 3px;
+  top: 0;
+  position: fixed;
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+li a {
+  display: block;
+  color: #fdf9ff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 35px;
+}
+
+li a:hover {
+  color: #8e9aaf;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* social media buttons */
+
+.socials {
+  position: fixed;
+  list-style: none;
+  top: 45%;
+  left: 1%;
+  cursor: pointer;
+}
+
+/* about me page */
+/* logo */
+
+.logo {
+  position: absolute;
+  max-width: 100%;
+  width: 535px;
+  height: auto;
+  left: 35%;
+  top: 15%;
+  object-fit: cover;
+}
+
+/* profile pic */
+
+.profilepic {
+  position: absolute;
+  height: 424px;
+  width: 424px;
+  left: 10%;
+  top: 25%;
+  border-radius: 100%;
+  border: 10px solid rgba(142, 154, 175, 0.8)
+}
+
+/* paragraph */
+.about-me{
+    position: absolute;
+    right:7%;
+    bottom: 30%;
+    color: #fdf9ff;
+    font-size: 20px;
+    width: 50%;
+    text-align: right;
+}
+
+/* contact me page */
+.contactme-form {
+    border-radius: 5px;
+    background-color: #efd3d7;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top:20%;
+    right:5%;
+    width:30%;
+  }
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #fdf9ff; 
+    border-radius: 4px; 
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #8e9aaf;
+    color: #fdf9ff;
+    padding: 12px 20px;
+    border: 2px solid #8e9aaf;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #cbc0dc;
+  }
+
+  .contact-me-plant{
+    object-fit: cover;
+    left:5%;
+    width:50%;
+    height:30%;
+    top:30%;
+    margin:7%;
+  }
+  
+/* media queries */
+@media only screen and (max-width: 500px) {
+  .logo {
+    display: none;
+  }
+}
