@@ -9,7 +9,7 @@
   /*colors:
 text: FDF9FF 
 subtext: F0EAF3
-background: CBC0D
+background: CBC0DC
 box fill: EFD3D7 (rose gold)
 stroke, boxes: 8E9AAF (dark grey)
 light pink: FEEAFA
@@ -87,82 +87,215 @@ li a:hover {
   object-fit: cover;
 }
 
-/* profile pic */
-
+/* about me page, profile pic */
 .profilepic {
   position: absolute;
-  height: 424px;
-  width: 424px;
+  height: 430px;
+  width: 520px;
   left: 10%;
-  top: 25%;
-  border-radius: 100%;
-  border: 10px solid rgba(142, 154, 175, 0.8)
+  top: 15%;
+}
+
+.IC-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: #cbc0dc;
+  border-top: 30px solid #cbc0dc;
+  border-bottom: 170px solid #cbc0dc;
+}
+.profilepic:hover .overlay {
+  opacity: 1;
+}
+.profilepicreveal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translate(0 100%);
+  -ms-transform: translate(0, 100%);
 }
 
 /* paragraph */
-.about-me{
-    position: absolute;
-    right:7%;
-    bottom: 30%;
-    color: #fdf9ff;
-    font-size: 20px;
-    width: 50%;
-    text-align: right;
+.about-me {
+  position: absolute;
+  right: 7%;
+  bottom: 30%;
+  color: #fdf9ff;
+  font-size: 20px;
+  width: 50%;
+  text-align: right;
 }
 
 /* contact me page */
 .contactme-form {
-    border-radius: 5px;
-    background-color: #efd3d7;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: absolute;
-    top:20%;
-    right:5%;
-    width:30%;
-  }
-
-input[type=text], select, textarea {
-    width: 100%; 
-    padding: 10px; 
-    border: 1px solid #fdf9ff; 
-    border-radius: 4px; 
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    background-color: #8e9aaf;
-    color: #fdf9ff;
-    padding: 12px 20px;
-    border: 2px solid #8e9aaf;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 20px;
-  }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: #cbc0dc;
-  }
-
-  .contact-me-plant{
-    object-fit: cover;
-    left:5%;
-    width:50%;
-    height:30%;
-    top:30%;
-    margin:7%;
-  }
-  
-/* media queries */
-@media only screen and (max-width: 500px) {
-  .logo {
-    display: none;
-  }
+  border-radius: 5px;
+  background-color: #efd3d7;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 18%;
+  right: 6%;
+  width: 40%;
 }
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #fdf9ff;
+  border-radius: 4px;
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #8e9aaf;
+  color: #fdf9ff;
+  padding: 12px 20px;
+  border: 2px solid #8e9aaf;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #cbc0dc;
+}
+
+.contact-me-plant {
+  object-fit: cover;
+  left: 5%;
+  width: 50%;
+  height: 30%;
+  top: 30%;
+  margin: 7%;
+}
+
+/* skills page */
+
+.row {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 10%;
+  right: 10%;
+  bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+
+
+.column {
+  display: block;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  justify-content: flex-start;
+}
+
+.column h2 {
+  font-size: 35px;
+}
+
+.column .skills-list {
+  font-size: 20px;
+}
+
+.skills-img{
+    position: absolute;
+    right:6%;
+    top: 30%;
+    height:43%;
+    width:8%;
+}
+
+/* projects page - gallery */
+
+.gallery {
+    top: 15%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .row1, .row2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .project:hover {
+    border: 1px solid #777;
+  }
+  
+  .project img {
+    align-items: center;
+  }
+  
+  .desc {
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+
+/* media queries example */
+/* @media only screen and (max-width: 770px) {
+
+    .background-about,
+    .background-courses,
+    .background-offer,
+    .background-contact,
+    .hr-footer,
+    .button-footer,
+    .contact-email,
+    .logo-footer {
+        display: none
+    }
+
+    .text-container-about,
+    .text-container-courses,
+    .text-container-offer,
+    .text-container-contact,
+    .footer-container {
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        /* align-items: center; */
+/* text-align: center;
+        width: auto;
+        align-items: center;
+        margin: 0 15%;
+    }
+}
+     */
