@@ -1,0 +1,26 @@
+body {
+  background-image: url(/electric.gif);
+  background-size: cover;
+}
+
+.light-bulb {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  left: 25%;
+}
+
+img {
+  padding: 20px;
+  margin: 20px;
+}
+
+p {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: azure;
+}
