@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@500;700&family=Ubuntu:wght@500&display=swap');
+
+body {
+    font-family: system-ui;
+    background: #c37d92;
+    color: white;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 100px;
+    margin-top: 20%;
+  }
